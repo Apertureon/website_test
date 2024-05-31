@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header, .content, footer {
+    width: calc(100% - 40px);
+    margin: auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header {
+    background: #333;
+    color: white;
+    text-align: center;
+}
+
+.gallery {
+    display: block;
+    width: 100%; 
+}
+
+.grid-sizer,
+.photo {
+    width: 24%; 
+    float: left; /* Optional: Helps manage layout without flexbox or CSS grid */
+}
+
+.gutter-sizer { 
+    width: 1.33%; 
+}
+
+.photo {
+    margin-bottom: 10px; /* Space between rows */
+    box-sizing: border-box; /* Includes padding and border in the element's width */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.photo img {
+    width: 100%; /* Makes image fill the container */
+    height: auto; /* Keeps image aspect ratio */
+    display: block; /* Removes bottom margin/gap inherent to inline elements */
+}
+
+.details {
+    font-size: 0.8em;
+    text-align: center;
+    padding: 5px 0;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #666;
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+    .grid-sizer,
+    .photo {
+        width: 100%; 
+    }
+
+    header h1 {
+        font-size: 1.6em; /* Larger size for headings */
+    }
+    
+    header p {
+        font-size: 0.8em; /* Smaller size for subtext */
+    }
+
+    .details {
+        font-size: 0.8em; /* Smaller text on smaller screens */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+    .grid-sizer,
+    .photo {
+        width: 49%; 
+    }
+
+    .gutter-sizer { 
+        width: 2%; 
+    }
+}
+
+@media (min-width: 1001px) and (max-width: 1300px) {
+    .grid-sizer,
+    .photo {
+        width: 32%; 
+    }
+
+    .gutter-sizer { 
+        width: 2%; 
+    }
+}
+
+@media (min-width: 2560px) {
+    .grid-sizer,
+    .photo {
+        width: 19%; 
+    }
+
+    .gutter-sizer { 
+        width: 1.25%; 
+    }
+}
