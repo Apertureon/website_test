@@ -4,11 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
         itemSelector: '.photo',
         columnWidth: '.grid-sizer',
         gutter: '.gutter-sizer',
-        percentPosition: true, // Enable percentage-based positions       
+        percentPosition: true,        
     });
 
     imageList.forEach(image => {
         const img = new Image();
+        img.loading = 'lazy'; // Adding lazy loading to the image
         img.src = image.thumbnail; // Use the thumbnail for the img src
         img.onload = function() {
             const photoDiv = document.createElement('div');
