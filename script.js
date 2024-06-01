@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     detailsDiv.innerHTML = "No EXIF Data found.";
                 }
-                msnry.layout();
             });
             msnry.appended(photoDiv);
             
