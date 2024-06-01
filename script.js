@@ -39,8 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     detailsDiv.innerHTML = `f/${aperture ? aperture.numerator / aperture.denominator : 'N/A'} | ` +
                                         `${shutterSpeed ? shutterSpeed.numerator + '/' + shutterSpeed.denominator + ' s' : 'N/A'} | ` +
                                         `ISO ${iso || 'N/A'}`;
+                    console.log('EXIF loaded for:', img.src);
                 } else {
                     detailsDiv.innerHTML = "No EXIF Data found.";
+                    console.log('No EXIF data found for:', img.src);
                 }
             });
             msnry.appended(photoDiv);
@@ -49,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     imagesLoaded(grid, function() {
+        console.log('All images loaded');
         msnry.layout();
     });
- 
 });
