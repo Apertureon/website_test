@@ -8,9 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         percentPosition: true,        
     });
 
-    imagesLoaded(grid, function() {
-        msnry.layout();
-    });
+    
 
     imageList.forEach(image => {
         const img = new Image();
@@ -48,5 +46,10 @@ document.addEventListener('DOMContentLoaded', function() {
             msnry.appended(photoDiv);
             msnry.layout();
         };            
-    });   
+    });
+
+    imagesLoaded(grid, function() {
+        msnry.layout();
+    });
+ 
 });
