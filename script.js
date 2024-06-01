@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     imageList.forEach(image => {
         const img = new Image();
+        img.loading = 'lazy'; // Adding lazy loading to the image
         img.src = image.thumbnail; // Use the thumbnail for the img src
         img.alt = "Thumbnail image"; // Provide alternative text
         img.onload = function() {
