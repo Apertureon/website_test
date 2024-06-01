@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             photoDiv.appendChild(detailsDiv); 
             grid.appendChild(photoDiv);
 
+            let exifDataLoaded = false;
             EXIF.getData(img, function() {
                 var aperture = EXIF.getTag(this, 'FNumber');
                 var shutterSpeed = EXIF.getTag(this, 'ExposureTime');
