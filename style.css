@@ -25,6 +25,11 @@ header {
     display: block;   
 }
 
+.photo {
+    margin-bottom: 10px; /* Space between rows */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
 .grid-sizer,
 .photo {
     width: 24%;
@@ -32,11 +37,6 @@ header {
 
 .gutter-sizer { 
     width: 1.33%; 
-}
-
-.photo {
-    margin-bottom: 10px; /* Space between rows */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
 .photo img {
