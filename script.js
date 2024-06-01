@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         imageList.forEach(image => {
             const img = new Image();
-            img.src = image.thumbnail; // Use the thumbnail for the img src
+            
             img.alt = "Thumbnail image"; // Provide alternative text
             img.onload = function() {
                 const photoDiv = document.createElement('div');
@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 msnry.appended(photoDiv);
                 msnry.layout();
             };
+            img.src = image.thumbnail; // Use the thumbnail for the img src
         });
     });    
 });
