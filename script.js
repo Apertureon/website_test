@@ -13,9 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Initial layout completed after all images loaded.');
     });
 
+    let imagesLoadedCount = 0; // 记录加载完成的图片数量
+    let totalImages = imageList.length; // 总图片数量
+
     imageList.forEach(image => {
         const img = new Image();
-        img.loading = 'lazy'; // Adding lazy loading to the image
         img.src = image.thumbnail; // Use the thumbnail for the img src
         img.alt = "Thumbnail image"; // Provide alternative text
         img.onload = function() {
@@ -49,9 +51,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     console.log('No EXIF data found for:', img.src);
                 }
 
-                msnry.appended(photoDiv);
-                msnry.layout();
-                console.log('Layout updated after EXIF data loaded for:', img.src);
+                if (exifDataLoaded) {
+                    imagesLoadedCount++;
+                    if (imagesLoadedCount === totalImages) {
+                        msnry.appended(photoDiv);
+                        msnry.layout(); // 所有EXIF数据加载完毕后重新计算布局
+                        console.log('Layout updated after all EXIF data loaded');
+                    }
+                }
+
             });
         };            
     });
