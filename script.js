@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
         percentPosition: true,        
     });
 
-
-
     imageList.forEach(image => {
         const img = new Image();
         img.src = image.thumbnail; // Use the thumbnail for the img src
@@ -22,11 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
             link.href = image.original; // Link to the original image
             link.target = '_blank'; // Ensures the link opens in a new tab
             link.appendChild(img); // Append the img to the link
+            photoDiv.appendChild(link); // Append link (which contains the img) to the photoDiv
 
             const detailsDiv = document.createElement('div'); 
             detailsDiv.className = 'details'; 
-
-            photoDiv.appendChild(link); // Append link (which contains the img) to the photoDiv
+            
             photoDiv.appendChild(detailsDiv); 
             grid.appendChild(photoDiv);
 
