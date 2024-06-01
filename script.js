@@ -8,7 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
         percentPosition: true,        
     });
 
-    
+    imagesLoaded(grid, function() {
+        msnry.layout();
+        console.log('Initial layout completed after all images loaded.');
+    });
 
     imageList.forEach(image => {
         const img = new Image();
@@ -44,14 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     detailsDiv.innerHTML = "No EXIF Data found.";
                     console.log('No EXIF data found for:', img.src);
                 }
-            });
-            msnry.appended(photoDiv);
-            msnry.layout();
-        };            
-    });
 
-    imagesLoaded(grid, function() {
-        console.log('All images loaded');
-        msnry.layout();
+                msnry.appended(photoDiv);
+                msnry.layout();
+                console.log('Layout updated after EXIF data loaded for:', img.src);
+            });
+        };            
     });
 });
