@@ -1,51 +1,53 @@
 document.addEventListener('DOMContentLoaded', function() {
     const grid = document.querySelector('.gallery');
-    imagesLoaded(grid, function() {
-        const msnry = new Masonry(grid, {
-            itemSelector: '.photo',
-            columnWidth: '.grid-sizer',
-            gutter: '.gutter-sizer',
-            percentPosition: true,        
-        });
+    
+    const msnry = new Masonry(grid, {
+        itemSelector: '.photo',
+        columnWidth: '.grid-sizer',
+        gutter: '.gutter-sizer',
+        percentPosition: true,        
+    });
 
-        imageList.forEach(image => {
-            const img = new Image();
-            
-            img.alt = "Thumbnail image"; // Provide alternative text
-            img.onload = function() {
-                const photoDiv = document.createElement('div');
-                photoDiv.className = 'photo';
+    imagesLoaded(grid).progress(function() {
+        msnry.layout();
+    });
 
-                const link = document.createElement('a');
-                link.href = image.original; // Link to the original image
-                link.target = '_blank'; // Ensures the link opens in a new tab
-                link.appendChild(img); // Append the img to the link
+    imageList.forEach(image => {
+        const img = new Image();
+        img.src = image.thumbnail; // Use the thumbnail for the img src
+        img.alt = "Thumbnail image"; // Provide alternative text
+        img.onload = function() {
+            const photoDiv = document.createElement('div');
+            photoDiv.className = 'photo';
 
-                const detailsDiv = document.createElement('div'); 
-                detailsDiv.className = 'details'; 
+            const link = document.createElement('a');
+            link.href = image.original; // Link to the original image
+            link.target = '_blank'; // Ensures the link opens in a new tab
+            link.appendChild(img); // Append the img to the link
 
-                photoDiv.appendChild(link); // Append link (which contains the img) to the photoDiv
-                photoDiv.appendChild(detailsDiv); 
-                grid.appendChild(photoDiv);
+            const detailsDiv = document.createElement('div'); 
+            detailsDiv.className = 'details'; 
 
-                EXIF.getData(img, function() {
-                    var aperture = EXIF.getTag(this, 'FNumber');
-                    var shutterSpeed = EXIF.getTag(this, 'ExposureTime');
-                    var iso = EXIF.getTag(this, 'ISOSpeedRatings');
+            photoDiv.appendChild(link); // Append link (which contains the img) to the photoDiv
+            photoDiv.appendChild(detailsDiv); 
+            grid.appendChild(photoDiv);
 
-                    if (aperture || shutterSpeed || iso) {
-                        detailsDiv.innerHTML = `f/${aperture ? aperture.numerator / aperture.denominator : 'N/A'} | ` +
-                                            `${shutterSpeed ? shutterSpeed.numerator + '/' + shutterSpeed.denominator + ' s' : 'N/A'} | ` +
-                                            `ISO ${iso || 'N/A'}`;
-                    } else {
-                        detailsDiv.innerHTML = "No EXIF Data found.";
-                    }
-                });
+            EXIF.getData(img, function() {
+                var aperture = EXIF.getTag(this, 'FNumber');
+                var shutterSpeed = EXIF.getTag(this, 'ExposureTime');
+                var iso = EXIF.getTag(this, 'ISOSpeedRatings');
 
-                msnry.appended(photoDiv);
-                msnry.layout();
-            };
-            img.src = image.thumbnail; // Use the thumbnail for the img src
-        });
-    });    
+                if (aperture || shutterSpeed || iso) {
+                    detailsDiv.innerHTML = `f/${aperture ? aperture.numerator / aperture.denominator : 'N/A'} | ` +
+                                        `${shutterSpeed ? shutterSpeed.numerator + '/' + shutterSpeed.denominator + ' s' : 'N/A'} | ` +
+                                        `ISO ${iso || 'N/A'}`;
+                } else {
+                    detailsDiv.innerHTML = "No EXIF Data found.";
+                }
+            });
+
+            msnry.appended(photoDiv);
+            /*msnry.layout();*/
+        };            
+    });        
 });
