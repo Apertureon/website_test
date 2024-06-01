@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
         percentPosition: true,        
     });
 
+    imagesLoaded(grid, function() {
+        msnry.layout();
+    });
+
     imageList.forEach(image => {
         const img = new Image();
         img.src = image.thumbnail; // Use the thumbnail for the img src
