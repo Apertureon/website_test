@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -16,6 +17,18 @@
     <p>Exploring the beauty in everyday life</p>
 </header>
 <div class="content">
+    <!-- Filter buttons -->
+    <div id="filters" class="button-group">
+        <button class="button is-checked" data-filter="*">Show All</button>
+        <button class="button" data-filter=".london">London</button>
+        <button class="button" data-filter=".paris">Paris</button>
+        <button class="button" data-filter=".york">York</button>
+    </div>
+    <!-- Sort buttons -->
+    <div id="sorts" class="button-group">
+        <button class="button" data-sort-by="original-order">Original Order</button>
+        <button class="button" data-sort-by="date">Date</button>
+    </div>
     <section class="gallery">
         <div class="grid-sizer"></div>
         <div class="gutter-sizer"></div>
