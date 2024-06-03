@@ -34,19 +34,21 @@ header {
 .button {
     padding: 8px 16px;
     margin: 5px;
-    background-color: #666;
-    color: white;
+    background-color: #f0f0f0; 
+    color: #333;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
     display: inline-block;
 }
 
 .button:hover {
-    background-color: #555;
+    background-color: #e0e0e0;
 }
 
-.button.active {
-    background-color: #333;
+.button:focus, .button:active {
+    outline: none; /* Removes the default outline */
+    box-shadow: 0 0 0 2px #555; /* Adds a subtle outline */
 }
 
 .gallery {
