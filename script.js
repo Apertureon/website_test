@@ -70,18 +70,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Set up filters
-    document.querySelectorAll('#filters .button').forEach(button => {
+    document.querySelectorAll('.filters .button').forEach(button => {
         button.addEventListener('click', function() {
             const filterValue = this.getAttribute('data-filter');
             iso.arrange({ filter: filterValue });
+            console.log('Filtering:', filterValue);
         });
     });
 
     // Set up sorting
-    document.querySelectorAll('#sorts .button').forEach(button => {
+    document.querySelectorAll('.sorting .button').forEach(button => {
         button.addEventListener('click', function() {
             const sortValue = this.getAttribute('data-sort-by');
             iso.arrange({ sortBy: sortValue });
+            console.log('Sorting by:', sortValue);
         });
     });
 });
