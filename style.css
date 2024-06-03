@@ -20,7 +20,17 @@ header {
     text-align: center;
 }
 
-/* Adding button styles for filtering and sorting */
+.filter-sort-area {
+    background-color: #f0f0f0; /* Light grey background for the filter and sort area */
+    padding: 10px 20px; /* Padding around the filter and sort buttons */
+    text-align: center; /* Center the buttons and labels */
+}
+
+.filters .label, .sorting .label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
 .button {
     padding: 8px 16px;
     margin: 5px;
