@@ -5,8 +5,11 @@ body, html {
 }
 
 .navbar {
+    display: flex;
+    align-items: center;  /* 垂直居中所有子元素 */
+    justify-content: center; /* 水平居中子元素 */
+    height: 9vh;
     width: 100%;
-    height: 10vh;
     position: fixed;
     top: 0;
     background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
@@ -16,11 +19,14 @@ body, html {
 .navbar ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    margin: 0;  /* 移除ul的默认外边距 */
+    display: flex;  /* 使ul中的项目以Flexbox方式布局 */
+    align-items: center;  /* 确保内容垂直居中 */
+    justify-content: center;  /* 再次确保水平居中，对于内部元素的细微对齐 */
 }
 
 .navbar li {
-    display: inline;
+    display: inline-block;
     margin: 10px;
 }
 
