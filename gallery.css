@@ -17,7 +17,6 @@ body {
 .filter-sort-area {
     padding-top: 10vh;
     background-color: #f8f8f8;
-    padding: 10px 20px; /* Padding around the filter and sort buttons */
     text-align: center; /* Center the buttons and labels */
 }
 
