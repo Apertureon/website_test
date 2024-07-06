@@ -50,7 +50,7 @@ body {
     display: block;
 }
 
-.grid-sizer {
+.grid-sizer, .photo {
     width: 24%;
 }
 
@@ -86,13 +86,13 @@ footer {
 }
 
 @media (max-width: 600px) {
-    .grid-sizer {
+    .grid-sizer, .photo {
         width: 100%;
     }
 }
 
 @media (min-width: 601px) and (max-width: 1000px) {
-    .grid-sizer {
+    .grid-sizer, .photo {
         width: 49%;
     }
     .gutter-sizer {
@@ -101,7 +101,7 @@ footer {
 }
 
 @media (min-width: 1001px) and (max-width: 1300px) {
-    .grid-sizer {
+    .grid-sizer, .photo {
         width: 32%;
     }
     .gutter-sizer {
@@ -110,7 +110,7 @@ footer {
 }
 
 @media (min-width: 2560px) {
-    .grid-sizer {
+    .grid-sizer, .photo {
         width: 19%;
     }
     .gutter-sizer {
