@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <title>My Photography Work</title>
     <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="navbar.css"> <!-- 引入导航栏的样式 -->
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </nav>
+    <!-- 导航栏占位符 -->
+    <div id="navbar-placeholder"></div>
 
     <div class="intro-section">
         <h1>Welcome to My Photography Work</h1>
         <p>Exploring the beauty in everyday life through my lens.</p>
-        <button onclick="location.href='#gallery'">Enter Gallery</button>
+        <button onclick="location.href='gallery.html'">Enter Gallery</button>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            // 加载导航栏到占位符
+            $("#navbar-placeholder").load("navbar.html", function() {
+                // 当导航栏加载完成后, 可以在这里执行一些动作
+                $(".navbar").addClass('transparent'); // 添加透明背景类
+            });
+        });
+    </script>
 </body>
 </html>
+
