@@ -14,9 +14,10 @@ body {
 }
 
 .filter-sort-area {
-    padding-top: 10vh;
+    margin-top: 10vh;
+    padding: 5px 0;
     background-color: #f8f8f8;
-    text-align: center; /* Center the buttons and labels */
+    text-align: center;
 }
 
 .filters .label, .sorting .label {
