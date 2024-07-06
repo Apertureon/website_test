@@ -19,11 +19,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(function() {
-            // 加载导航栏到占位符
-            $("#navbar-placeholder").load("navbar.html", function() {
-                // 当导航栏加载完成后, 可以在这里执行一些动作
-                $(".navbar").addClass('transparent'); // 添加透明背景类
-            });
+            $("#navbar-placeholder").load("navbar.html");
         });
     </script>
 </body>

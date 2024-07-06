@@ -1,4 +1,3 @@
-/* Base navbar style */
 .navbar {
     display: flex;
     align-items: center;  /* 垂直居中所有子元素 */
@@ -8,14 +7,7 @@
     position: fixed;
     top: 0;
     z-index: 1000; /* 确保导航栏在最上层 */
-}
-
-.navbar.transparent {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent for homepage */
-}
-
-.navbar.solid {
-    background: rgba(0, 0, 0, 0.7); /* Solid color for other pages */
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .navbar ul {
