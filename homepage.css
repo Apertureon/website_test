@@ -27,7 +27,7 @@ body, html {
 
 .navbar li {
     display: inline-block;
-    margin: 10px;
+    margin: 10px 30px;
 }
 
 .navbar a {
@@ -63,11 +63,11 @@ body, html {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: #fff;
-    color: #333;
+    background-color: #5a5a5a; /* 深灰色背景 */
+    color: #fff;
     transition: background-color 0.3s;
 }
 
 .intro-section button:hover {
-    background-color: #ddd;
+    background-color: #787878;
 }
