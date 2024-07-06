@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (aperture || shutterSpeed || isoSpeed) {
                     detailsDiv.innerHTML = `<span class='exif'>f/${aperture ? aperture.numerator / aperture.denominator : 'N/A'}</span> ` +
-                                        `<span class='exif'>${shutterSpeed ? shutterSpeed.numerator + '/' + shutterSpeed.denominator + ' s' : 'N/A'}</span> ` +
+                                        `<span class='exif'>${shutterSpeed ? shutterSpeed.numerator + '/' + shutterSpeed.denominator + 's' : 'N/A'}</span> ` +
                                         `<span class='exif'>ISO ${isoSpeed || 'N/A'}</span>`;
                 } else {
                     detailsDiv.innerHTML = "No EXIF Data found.";
