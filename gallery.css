@@ -6,7 +6,7 @@ body {
     color: #333;
 }
 
-header, .content, footer {
+.content, footer {
     width: calc(100% - 40px);
     margin: auto;
     padding: 20px;
@@ -14,13 +14,8 @@ header, .content, footer {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-header {
-    background: #333;
-    color: white;
-    text-align: center;
-}
-
 .filter-sort-area {
+    padding-top: 10vh;
     background-color: #f8f8f8;
     padding: 10px 20px; /* Padding around the filter and sort buttons */
     text-align: center; /* Center the buttons and labels */
