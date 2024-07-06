@@ -7,12 +7,11 @@ body {
 }
 
 .about-container {
-    margin-top: 10vh; /* Give space for the navbar */
-    padding: 20px;
+    padding: 40px;
     background: white;
-    width: 80%;
+    width: 100%;
     max-width: 800px;
-    margin: 60px auto 20px; /* Centers the container with space for navbar */
+    margin: 20vh auto 20px; /* Centers the container with space for navbar */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 10px;
 }
