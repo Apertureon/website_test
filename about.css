@@ -1,7 +1,7 @@
 body {   
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 100%;
 }
 
 .about-container {
@@ -39,4 +39,16 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+@media (max-width: 600px) {
+    .about-container h1 {
+        font-size: 2em;
+    }
+    .about-container p {
+        display: none;
+    }
+    .about-details {
+        font-size: 1em;
+    }
 }
