@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>My Photography Work</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="navbar.css"> 
     <script src="imageList.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<header>
-    <h1>My Photography Work</h1>
-    <p>Exploring the beauty in everyday life</p>
-</header>
+
+<div id="navbar-placeholder"></div>
+
 <div class="filter-sort-area">
     <div class="filters">
         <span class="label">Category:</span>
@@ -49,6 +50,14 @@
 <footer>
     <p>&copy; 2024 My Photography Work</p>
 </footer>
-<script src="script.js"></script>
+<script src="gallery.js"></script>
+<script>
+    $(function() {
+        // 加载导航栏到占位符
+        $("#navbar-placeholder").load("navbar.html", function() {
+            $(".navbar").addClass('solid'); // 为gallery页面添加不透明背景类
+        });
+    });
+</script>
 </body>
 </html>
