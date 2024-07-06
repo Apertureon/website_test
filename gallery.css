@@ -86,13 +86,6 @@ footer {
     .grid-sizer, .photo {
         width: 100%;
     }
-    header h1 {
-        font-size: 1.6em; /* Larger size for headings */
-    }
-    
-    header p {
-        font-size: 0.8em; /* Smaller size for subtext */
-    }
 
     .details {
         font-size: 0.8em; /* Smaller text on smaller screens */
