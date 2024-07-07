@@ -118,7 +118,7 @@ footer {
     }
 }
 
-#myModal {
+#Modal {
     display: none; /* 默认不显示 */
     position: fixed; /* 固定位置，覆盖整个视口 */
     z-index: 1000; /* 高层级确保显示在顶部 */
@@ -130,14 +130,15 @@ footer {
     background-color: rgba(0, 0, 0, 0.9); /* 半透明黑色背景 */
 }
 
-/* 模态窗口中显示的图片 */
 #modalImage {
-    margin: 10px;
-    display: block;
-    width: 80%; /* 图片宽度，根据需求调整 */
-    max-height: 100vh; /* 确保图片高度不超过视口高度 */
-    height: auto;
-    object-fit: contain; /* 确保图片不失真 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 95%; /* 最大高度小于100%以避免接触边缘 */
+    max-width: 95%; /* 最大宽度也是，以保持一定边距 */
+    width: auto;  /* 宽度自适应，保证图片比例 */
+    height: auto; /* 高度自适应，保证图片内容 */
 }
 
 /* 关闭按钮样式 */

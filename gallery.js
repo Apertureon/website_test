@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const grid = document.querySelector('.gallery');
-    const modal = document.getElementById('myModal');
+    const modal = document.getElementById('Modal');
     const modalImg = document.getElementById("modalImage");
     const closeModal = document.getElementsByClassName("close")[0];
     
