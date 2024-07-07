@@ -27,12 +27,12 @@ body, html {
 
 .intro-section button {
     margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1em;
+    padding: 15px 20px;
+    font-size: 1.2em;
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: #5a5a5a; /* 深灰色背景 */
+    background-color: rgba(90, 90, 90, 0.7); /* 深灰色背景，50% 透明度 */
     color: #fff;
     transition: background-color 0.3s;
 }
@@ -49,6 +49,6 @@ body, html {
         display: none;
     }
     .intro-section button {
-        margin-top: 50px;
+        margin-top: 60px;
     }
 }
