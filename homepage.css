@@ -41,6 +41,17 @@ body, html {
     background-color: #787878;
 }
 
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #666;
+    padding: 10px 0;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 @media (max-width: 600px) {
     .intro-section h1 {
         font-size: 2em;
