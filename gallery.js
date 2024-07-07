@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const grid = document.querySelector('.gallery');
+    const modal = document.getElementById('myModal');
+    const modalImg = document.getElementById("modalImage");
+    const captionText = document.getElementById("caption");
+    const closeModal = document.getElementsByClassName("close")[0];
     
     // Initialize Isotope
     const iso = new Isotope(grid, {
@@ -34,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const link = document.createElement('a');
         link.href = image.original; // Link to the original image
-        link.target = '_blank'; // Ensures the link opens in a new tab
         link.appendChild(img); // Append the img to the link
         photoDiv.appendChild(link); // Append link (which contains the img) to the photoDiv
 
@@ -67,7 +70,19 @@ document.addEventListener('DOMContentLoaded', function() {
             iso.appended(photoDiv);
             console.log(`Image appended and layout called for: ${img.src}`);
         };
+
+        // Event listener for opening the modal
+        img.addEventListener('click', function() {
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        });
     });
+
+    // Close the modal
+    closeModal.onclick = function() {
+        modal.style.display = "none";
+    };
     
     // Set up filters
     document.querySelectorAll('.filters .button').forEach(button => {
