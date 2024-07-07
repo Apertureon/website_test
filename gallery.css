@@ -118,41 +118,29 @@ footer {
     }
 }
 
-/* Style the modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 2000; /* Sit on top */
+#myModal {
+    display: none; /* 默认不显示 */
+    position: fixed; /* 固定位置，覆盖整个视口 */
+    z-index: 1000; /* 高层级确保显示在顶部 */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    width: 100%; /* 宽度为视口宽度 */
+    height: 100%; /* 高度为视口高度 */
+    overflow: auto; /* 如果内容过多，允许滚动 */
+    background-color: rgb(0, 0, 0); /* 半透明黑色背景 */
+    background-color: rgba(0, 0, 0, 0.9); /* 透明度更改 */
 }
 
-/* Modal Content (Image) */
-.modal-content {
+/* 模态窗口中显示的图片 */
+#modalImage {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    width: 80%; /* 图片宽度，根据需求调整 */
+    max-width: 700px; /* 最大宽度 */
+    height: auto;
 }
 
-/* Caption of Modal Image (Image Text) - Same width as the image */
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
-
-/* The Close Button */
+/* 关闭按钮样式 */
 .close {
     position: absolute;
     top: 15px;
@@ -160,13 +148,13 @@ footer {
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
+/* 鼠标悬浮在关闭按钮上时 */
 .close:hover,
 .close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
 }
-

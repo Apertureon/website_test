@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const grid = document.querySelector('.gallery');
     const modal = document.getElementById('myModal');
     const modalImg = document.getElementById("modalImage");
-    const captionText = document.getElementById("caption");
     const closeModal = document.getElementsByClassName("close")[0];
     
     // Initialize Isotope
@@ -36,10 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
         photoDiv.className = 'photo ' + image.category; // Assign category for filtering
         photoDiv.setAttribute('data-date', image.date); // Assign date for sorting
 
-        const link = document.createElement('a');
-        link.href = image.original; // Link to the original image
-        link.appendChild(img); // Append the img to the link
-        photoDiv.appendChild(link); // Append link (which contains the img) to the photoDiv
+        photoDiv.onclick = function() {  // 添加点击事件
+            modal.style.display = "block";
+            modalImg.src = image.original;
+        };
 
         const detailsDiv = document.createElement('div'); 
         detailsDiv.className = 'details'; 
@@ -70,17 +69,9 @@ document.addEventListener('DOMContentLoaded', function() {
             iso.appended(photoDiv);
             console.log(`Image appended and layout called for: ${img.src}`);
         };
-
-        // Event listener for opening the modal
-        img.addEventListener('click', function() {
-            modal.style.display = 'block';
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        });
     });
 
-    // Close the modal
-    closeModal.onclick = function() {
+    closeModal.onclick = function() {  // 关闭模态窗口
         modal.style.display = "none";
     };
     
