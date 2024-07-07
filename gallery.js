@@ -39,11 +39,12 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = "block";
             modalImg.src = image.original;
         };
+        photoDiv.appendChild(img);
+        grid.appendChild(photoDiv);
 
         const detailsDiv = document.createElement('div'); 
         detailsDiv.className = 'details'; 
-        photoDiv.appendChild(detailsDiv); 
-        grid.appendChild(photoDiv);
+        photoDiv.appendChild(detailsDiv);
 
         img.onload = function() {
             EXIF.getData(img, function() {
@@ -74,6 +75,13 @@ document.addEventListener('DOMContentLoaded', function() {
     closeModal.onclick = function() {  // 关闭模态窗口
         modal.style.display = "none";
     };
+
+    // Close the modal when clicking outside of the image
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
     
     // Set up filters
     document.querySelectorAll('.filters .button').forEach(button => {
