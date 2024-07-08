@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize Isotope
     const iso = new Isotope(grid, {
         itemSelector: '.photo',
+        filter: '.london',
         masonry: {
             columnWidth: '.grid-sizer',
             gutter: '.gutter-sizer'
