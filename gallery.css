@@ -19,6 +19,10 @@ body {
     margin-right: 5px;
 }
 
+.filter-dropdown {
+    display: none; /* 默认不显示下拉菜单 */
+}
+
 .button {
     padding: 8px 16px;
     margin: 5px;
@@ -131,11 +135,11 @@ footer {
     .grid-sizer, .photo {
         width: 100%;
     }
-    .filters {
-        display: none; /* 隐藏原始按钮 */
+    .filter-dropdown {
+        display: block; /* 在小屏幕上显示下拉菜单 */
     }
-    .dropdown {
-        display: block; 
+    .button {
+        display: none; /* 在小屏幕上隐藏按钮 */
     }
 }
 

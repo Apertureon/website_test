@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('Modal');
     const modalImg = document.getElementById("modalImage");
     const closeModal = document.getElementsByClassName("close")[0];
+    const filterDropdown = document.getElementById('filter-dropdown');
     
     // Initialize Isotope
     const iso = new Isotope(grid, {
@@ -83,6 +84,10 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = "none";
         }
     }
+
+    filterDropdown.addEventListener('change', function() {
+        iso.arrange({ filter: this.value });
+    });
     
     // Set up filters
     document.querySelectorAll('.filters .button').forEach(button => {
