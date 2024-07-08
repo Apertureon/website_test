@@ -22,7 +22,7 @@ body {
 .button {
     padding: 8px 16px;
     margin: 5px;
-    background-color: #f0f0f0; 
+    background-color: #e0e0e0; 
     color: #333;
     border: none;
     border-radius: 5px;
@@ -30,13 +30,11 @@ body {
     display: inline-block;
 }
 
-.button:hover {
-    background-color: #e0e0e0;
-}
-
 .button.active, .button:focus, .button:active {
+    background-color: #666;     
+    color: #fff;
     outline: none; /* Removes the default outline */
-    box-shadow: 0 0 0 2px #555; /* Adds a subtle outline */
+    box-shadow: 0 0 0 2px #666; /* Adds a subtle outline */
 }
 
 .content, footer {
@@ -132,6 +130,12 @@ footer {
 @media (max-width: 600px) {
     .grid-sizer, .photo {
         width: 100%;
+    }
+    .filters {
+        display: none; /* 隐藏原始按钮 */
+    }
+    .dropdown {
+        display: block; 
     }
 }
 

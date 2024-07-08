@@ -104,6 +104,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const sortValue = this.getAttribute('data-sort-by');
             iso.arrange({ sortBy: sortValue });
             console.log('Sorting by:', sortValue);
+
+            document.querySelectorAll('.filters .button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            this.classList.add('active');
         });
     });
 });
