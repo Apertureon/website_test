@@ -90,11 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const filterValue = this.getAttribute('data-filter');
             iso.arrange({ filter: filterValue });
             console.log('Filtering:', filterValue);
-
-            document.querySelectorAll('.filters .button').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            this.classList.add('active');
         });
     });
 
@@ -104,11 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const sortValue = this.getAttribute('data-sort-by');
             iso.arrange({ sortBy: sortValue });
             console.log('Sorting by:', sortValue);
-
-            document.querySelectorAll('.filters .button').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            this.classList.add('active');
         });
     });
 });
