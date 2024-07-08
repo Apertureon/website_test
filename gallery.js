@@ -90,6 +90,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const filterValue = this.getAttribute('data-filter');
             iso.arrange({ filter: filterValue });
             console.log('Filtering:', filterValue);
+
+            document.querySelectorAll('.filters .button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            this.classList.add('active');
         });
     });
 
