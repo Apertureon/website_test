@@ -29,11 +29,18 @@ body {
 }
 
 .filter-dropdown {
-    padding: 8px 16px; /* 增加内边距，改善触摸体验 */
+    padding: 8px 24px 8px 15px; /* 增加内边距，改善触摸体验 */
     border: 1px solid #ccc; /* 添加边框以提高可见性 */
+    font-size: 16px;
     border-radius: 5px; /* 圆角边框 */
     background-color: #fff; /* 背景颜色 */
     cursor: pointer; /* 指针样式 */
+    appearance: none; /* 去除原生样式 */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M7 10l5 5 5-5H7z"/></svg>') no-repeat;
+    background-position: right 4px center; /* 控制箭头的位置 */
+    background-size: 16px 16px; /* 控制箭头的大小 */
 }
 
 .button {
