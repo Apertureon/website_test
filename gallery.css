@@ -9,18 +9,23 @@ body {
     margin-top: 9vh;
     padding: 10px 0;
     background-color: #f8f8f8;
-    text-align: center;
 }
 
-.desktop-filters .label {
-    display: inline-flex; 
-    align-items: center; 
-    font-weight: bold;
-    margin-right: 5px;
+.filters {
+    text-align: center;
+    overflow-x: auto;             /* 超出部分允许水平滚动 */
+    flex-wrap: nowrap;            /* 禁止按钮折行 */
+    white-space: nowrap;
+    padding: 0 30px;
 }
 
 .mobile-filters {
     display: none; 
+}
+
+.label {
+    font-weight: bold;
+    margin-right: 5px;
 }
 
 .filter-dropdown {
@@ -166,13 +171,6 @@ footer {
     }
     .gutter-sizer {
         width: 2%;
-    }
-    .filters {
-        display: flex;                /* 开启弹性盒模型 */
-        overflow-x: auto;             /* 超出部分允许水平滚动 */
-        flex-wrap: nowrap;            /* 禁止按钮折行 */
-        white-space: nowrap;          /* 确保所有内容在一行显示，防止换行 */ 
-        padding: 0 30px;        
     }
 }
 
