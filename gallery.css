@@ -12,15 +12,23 @@ body {
     text-align: center;
 }
 
-.filters .label, .sorting .label {
+.desktop-filters .label {
     display: inline-flex; 
     align-items: center; 
     font-weight: bold;
     margin-right: 5px;
 }
 
+.mobile-filters {
+    display: none; 
+}
+
 .filter-dropdown {
-    display: none; /* 默认不显示下拉菜单 */
+    padding: 8px 16px; /* 增加内边距，改善触摸体验 */
+    border: 1px solid #ccc; /* 添加边框以提高可见性 */
+    border-radius: 5px; /* 圆角边框 */
+    background-color: #fff; /* 背景颜色 */
+    cursor: pointer; /* 指针样式 */
 }
 
 .button {
@@ -135,11 +143,11 @@ footer {
     .grid-sizer, .photo {
         width: 100%;
     }
-    .filter-dropdown {
-        display: block; /* 在小屏幕上显示下拉菜单 */
+    .desktop-filters {
+        display: none; 
     }
-    .button {
-        display: none; /* 在小屏幕上隐藏按钮 */
+    .mobile-filters {
+        display: block
     }
 }
 
