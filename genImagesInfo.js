@@ -6,14 +6,19 @@ const exifReader = require('exifreader');
 const imagesDirectory = './images';
 const thumbnailsDirectory = './thumbnails';
 
+// 将路径中的反斜杠替换为正斜杠的函数
+function normalizePath(path) {
+    return path.replace(/\\/g, '/');
+}
+
 // 异步函数来处理图像
 async function processImages(directory, thumbnailDirectory) {
     const imageFiles = fs.readdirSync(directory);
     const imagesInfo = [];
 
     for (let file of imageFiles) {
-        const filePath = path.join(directory, file);
-        const thumbnailPath = path.join(thumbnailDirectory, file);
+        const filePath = normalizePath(path.join(directory, file));
+        const thumbnailPath = normalizePath(path.join(thumbnailDirectory, file));
 
         const data = fs.readFileSync(filePath);
         const tags = exifReader.load(data);
