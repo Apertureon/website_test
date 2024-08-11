@@ -37,7 +37,6 @@ body, html {
 .photo-wrapper {
     position: relative; /* 为内部的绝对定位图片作准备 */
     width: 100%; /* 宽度自适应父容器 */
-    background-color: black; /* 初始黑色背景 */
 }
 
 .photo-gallery {
