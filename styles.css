@@ -44,6 +44,10 @@ body, html {
     column-count: 4;
 }
 
+.grid-sizer, .photo-wrapper {
+    width: 33%;
+}
+
 .photo-gallery img {
     width: 100%;
     margin-bottom: 10px;

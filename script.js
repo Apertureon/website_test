@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const img = document.createElement('img');
                 img.src = photo.thumbnailPath; // 确保这里是thumbnail路径
-                img.alt = "Photo by Camarts";
+                img.alt = "Photo ";
                 img.style.position = 'absolute';
                 img.style.top = '0';
                 img.style.left = '0';
@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             imagesLoaded(gallery, () => {
                 new Masonry(gallery, {
                     itemSelector: '.photo-wrapper',
+                    columnWidth: '.grid-sizer',
                     percentPosition: true
                 });
             });
