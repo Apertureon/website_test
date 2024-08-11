@@ -41,10 +41,9 @@ body, html {
 }
 
 .photo-wrapper {
-    position: relative; /* 为绝对定位的图片做准备 */
-    width: 100%; /* 确保占满父容器的宽度 */
-    box-sizing: border-box;
-    background-repeat: no-repeat; /* 防止背景图重复 */
+    position: relative;
+    width: 100%; /* or another width if you are controlling it differently */
+    overflow: hidden;
 }
 
 .grid-sizer {
