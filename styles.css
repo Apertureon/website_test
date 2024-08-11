@@ -34,21 +34,28 @@ body, html {
     cursor: pointer;
 }
 
+.gallery {
+    width: 100%; 
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
 .photo-wrapper {
-    position: relative; /* 为内部的绝对定位图片作准备 */
-    width: 100%; /* 宽度自适应父容器 */
+    position: relative; /* 为绝对定位的图片做准备 */
+    width: 100%; /* 确保占满父容器的宽度 */
+    box-sizing: border-box;
+    background-repeat: no-repeat; /* 防止背景图重复 */
 }
 
-.photo-gallery {
-    margin: 20px;
-    column-count: 4;
+.grid-sizer {
+    width: 33.333%; 
 }
 
-.grid-sizer, .photo-wrapper {
-    width: 33%;
-}
-
-.photo-gallery img {
+.photo-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin-bottom: 10px;
+    height: 100%;
+    object-fit: cover; /* 确保图片不变形且覆盖整个容器 */
 }
