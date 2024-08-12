@@ -28,12 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 img.style.transition = 'opacity 1s ease-in'; // 添加渐显效果
                 imgDiv.appendChild(img);
 
-                // 添加点击事件
-                //img.addEventListener('click', () => {
-                    //modal.style.display = "block";
-                    //modalImg.src = photo.filePath; // 使用原图路径
-                    //captionText.innerHTML = photo.cameraModel; // 或其他适当的图片信息
-                //});
                 return imgDiv;
             });
 
@@ -62,21 +56,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 img.src = photo.thumbnailPath; 
                 img.onload = () => img.style.opacity = 1; // 图片加载完成后逐渐显示
 
+                // 添加点击事件
                 img.onclick = () => {
                     const modalImg = document.getElementById("ModalImg");
-                    const captionText = document.getElementById("caption");
-                    const imgParameter = document.getElementById('Aperture');
-                    const imgLocation = document.getElementById('Location');
-                    const imgCamera = document.getElementById('Camera');
-                    const imgLens = document.getElementById('Lens');
+                    //const captionText = document.getElementById("caption");
+                    const imgParameter = document.getElementById('parameter');
+                    const imgLocation = document.getElementById('location');
+                    const imgCamera = document.getElementById('camera');
+                    const imgLens = document.getElementById('lens');
 
                     modal.style.display = "block";
                     modalImg.src = photo.filePath;
                     //captionText.innerHTML = photo.description; // 假设description是描述信息
-                    //imgParameter.textContent = `参数: ${photo.focalLength || '未知'}mm, f/${photoData.aperture || '未知'}, 1/${photoData.shutterSpeed || '未知'}s, ISO ${photoData.iso || '未知'}`;
-                    //imgLocation.textContent = `地点: ${photo.location || '未知'}`;
-                    //imgCamera.textContent = `相机: ${photo.cameraModel || '未知'}`;
-                    //imgLens.textContent = `镜头: ${photo.lensModel || '未知'}`;
+                    imgParameter.textContent = `Parameter: f/${photoData.aperture || 'unknown'}, 1/${photoData.shutterSpeed || 'unknown'}s, ISO ${photoData.iso || 'unknown'}`;
+                    imgLocation.textContent = `Location: ${photo.location || 'unknown'}`;
+                    imgCamera.textContent = `Camera: ${photo.cameraModel || 'unknown'}`;
+                    imgLens.textContent = `Lens: ${photo.lensModel || 'unknown'}`;
                 };
             });
 

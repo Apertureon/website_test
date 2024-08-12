@@ -101,7 +101,20 @@ body, html {
     width: auto; 
     height: auto;
 }
-  
+
+.photo-info {
+    display: flex; 
+    justify-content: space-between; 
+    color: #ccc; 
+    padding: 10px 20px; 
+    font-size: 16px;
+}
+
+.photo-info > div {
+    flex: 1; /* 确保每个部分平均分配空间 */
+    padding: 5px 10px; 
+}
+
 /* 关闭按钮的样式 */
 .close {
     position: absolute;
