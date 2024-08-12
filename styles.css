@@ -11,7 +11,7 @@ body, html {
     height: 5vh;
     align-items: center; 
     justify-content: space-between;
-    padding: 20px 20px;
+    padding: 20px 40px;
     background-color: #333;
     color: #fff;
 }
@@ -42,7 +42,7 @@ body, html {
 
 .content {
     width: 80%;
-    margin: 20px auto; 
+    margin: 15px auto; 
 }
 
 .gallery {
@@ -54,7 +54,7 @@ body, html {
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
 }
 
 .grid-sizer, .photo-wrapper {
@@ -81,15 +81,18 @@ body, html {
     .grid-sizer, .photo-wrapper {
         width: 100%;
     }
+    .site-header {
+        padding: 15px 20px;
+    }
     .header-links a {
         padding: 0 10px;
         font-size: 1em;
     }
     .nav-button {
         margin: 0 8px;
-        padding: 6px 10px;
+        padding: 8px 12px;
         font-size: 0.8em;
-    }   
+    }    
 }
 
 @media (min-width: 601px) and (max-width: 1000px) {
