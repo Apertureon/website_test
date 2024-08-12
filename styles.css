@@ -36,18 +36,19 @@ body, html {
 
 .gallery {
     width: 100%; 
-    margin: 0 auto;
+    margin: 20px auto;
     box-sizing: border-box;
 }
 
 .photo-wrapper {
     position: relative;
     overflow: hidden;
+    background-color: #eee; /* 灰色背景，占位用 */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .grid-sizer, .photo-wrapper {
-    width: 33.333%; 
+    width: 33.333%; /* 每列占总宽度的三分之一 */
 }
 
 .photo-wrapper img {
