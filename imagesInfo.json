@@ -10,7 +10,7 @@
     "aperture": "f/4",
     "shutterSpeed": "1/80",
     "iso": 3600,
-    "Keywords": "London;UK;cityscape;explore"
+    "keywords": "London;UK;cityscape;explore"
   },
   {
     "filename": "DSC_0478.jpg",
@@ -23,7 +23,7 @@
     "aperture": "f/6.3",
     "shutterSpeed": "1/6",
     "iso": 200,
-    "Keywords": "London;UK;cityscape;explore"
+    "keywords": "London;UK;cityscape;explore"
   },
   {
     "filename": "DSC_0682.jpg",
@@ -36,7 +36,7 @@
     "aperture": "f/4",
     "shutterSpeed": "1/15",
     "iso": 100,
-    "Keywords": "London;UK;cityscape;explore"
+    "keywords": "London;UK;cityscape;explore"
   },
   {
     "filename": "DSC_0699.jpg",
@@ -49,7 +49,7 @@
     "aperture": "f/4",
     "shutterSpeed": "1/15",
     "iso": 800,
-    "Keywords": "London;UK;cityscape;explore"
+    "keywords": "London;UK;cityscape;explore"
   },
   {
     "filename": "DSC_0743.jpg",
@@ -62,7 +62,7 @@
     "aperture": "f/4",
     "shutterSpeed": "1/30",
     "iso": 800,
-    "Keywords": "London;UK;cityscape;explore"
+    "keywords": "London;UK;cityscape;explore"
   },
   {
     "filename": "DSC_0805.jpg",
@@ -75,7 +75,7 @@
     "aperture": "f/4",
     "shutterSpeed": "1/60",
     "iso": 800,
-    "Keywords": "London;UK;cityscape;explore"
+    "keywords": "London;UK;cityscape;explore"
   },
   {
     "filename": "DSC_1438.jpg",
@@ -88,7 +88,7 @@
     "aperture": "f/4",
     "shutterSpeed": "1/20",
     "iso": 400,
-    "Keywords": "London;UK;cityscape;explore"
+    "keywords": "London;UK;cityscape;explore"
   },
   {
     "filename": "DSC_1497.jpg",
@@ -101,7 +101,7 @@
     "aperture": "f/4",
     "shutterSpeed": "1/40",
     "iso": 400,
-    "Keywords": "London;UK;cityscape;explore"
+    "keywords": "London;UK;cityscape;explore"
   },
   {
     "filename": "DSC_3031.jpg",
@@ -114,7 +114,7 @@
     "aperture": "f/8",
     "shutterSpeed": "1/20",
     "iso": 100,
-    "Keywords": "explore;nature;plant"
+    "keywords": "explore;nature;plant"
   },
   {
     "filename": "DSC_3050.jpg",
@@ -127,7 +127,7 @@
     "aperture": "f/4",
     "shutterSpeed": "1/20",
     "iso": 400,
-    "Keywords": "explore;nature;plant"
+    "keywords": "explore;nature;plant"
   },
   {
     "filename": "DSC_3218.jpg",
@@ -140,7 +140,7 @@
     "aperture": "f/8",
     "shutterSpeed": "1/80",
     "iso": 100,
-    "Keywords": "explore;nature;plant"
+    "keywords": "explore;nature;plant"
   },
   {
     "filename": "DSC_4140.jpg",
@@ -153,7 +153,7 @@
     "aperture": "f/8",
     "shutterSpeed": "1/160",
     "iso": 100,
-    "Keywords": "life;vehicle"
+    "keywords": "life;vehicle"
   },
   {
     "filename": "DSC_4145.jpg",
@@ -166,7 +166,7 @@
     "aperture": "f/8",
     "shutterSpeed": "1/320",
     "iso": 100,
-    "Keywords": "life;vehicle"
+    "keywords": "life;vehicle"
   },
   {
     "filename": "DSC_4154.jpg",
@@ -179,7 +179,7 @@
     "aperture": "f/8",
     "shutterSpeed": "1/50",
     "iso": 100,
-    "Keywords": "life;vehicle"
+    "keywords": "life;vehicle"
   },
   {
     "filename": "DSC_4211.jpg",
@@ -192,7 +192,7 @@
     "aperture": "f/8",
     "shutterSpeed": "1/400",
     "iso": 100,
-    "Keywords": "life;vehicle"
+    "keywords": "life;vehicle"
   },
   {
     "filename": "DSC_4219.jpg",
@@ -205,7 +205,7 @@
     "aperture": "f/8",
     "shutterSpeed": "1/400",
     "iso": 100,
-    "Keywords": "life;vehicle"
+    "keywords": "life;vehicle"
   },
   {
     "filename": "DSC_4247.jpg",
@@ -218,7 +218,7 @@
     "aperture": "f/8",
     "shutterSpeed": "1/320",
     "iso": 100,
-    "Keywords": "life;vehicle"
+    "keywords": "life;vehicle"
   },
   {
     "filename": "DSC_4249.jpg",
@@ -231,7 +231,7 @@
     "aperture": "f/8",
     "shutterSpeed": "1/500",
     "iso": 100,
-    "Keywords": "life;vehicle"
+    "keywords": "life;vehicle"
   },
   {
     "filename": "DSC_4274.jpg",
@@ -244,7 +244,7 @@
     "aperture": "f/8",
     "shutterSpeed": "1/250",
     "iso": 100,
-    "Keywords": "life;vehicle"
+    "keywords": "life;vehicle"
   },
   {
     "filename": "DSC_4345.jpg",
@@ -257,7 +257,7 @@
     "aperture": "f/8",
     "shutterSpeed": "1/125",
     "iso": 100,
-    "Keywords": "life;vehicle"
+    "keywords": "life;vehicle"
   },
   {
     "filename": "DSC_4361.jpg",
@@ -270,7 +270,7 @@
     "aperture": "f/8",
     "shutterSpeed": "1/500",
     "iso": 100,
-    "Keywords": "life;vehicle"
+    "keywords": "life;vehicle"
   },
   {
     "filename": "DSC_4369.jpg",
@@ -283,7 +283,7 @@
     "aperture": "f/8",
     "shutterSpeed": "1/400",
     "iso": 100,
-    "Keywords": "life;vehicle"
+    "keywords": "life;vehicle"
   },
   {
     "filename": "DSC_4391.jpg",
@@ -296,7 +296,7 @@
     "aperture": "f/8",
     "shutterSpeed": "1/250",
     "iso": 100,
-    "Keywords": "life;vehicle"
+    "keywords": "life;vehicle"
   },
   {
     "filename": "DSC_4431.jpg",
@@ -309,7 +309,7 @@
     "aperture": "f/5.6",
     "shutterSpeed": "1/25",
     "iso": 100,
-    "Keywords": "London;UK;cityscape;explore"
+    "keywords": "London;UK;cityscape;explore"
   },
   {
     "filename": "DSC_4465.jpg",
@@ -322,7 +322,7 @@
     "aperture": "f/4",
     "shutterSpeed": "1/160",
     "iso": 100,
-    "Keywords": "London;UK;cityscape;explore"
+    "keywords": "London;UK;cityscape;explore"
   },
   {
     "filename": "DSC_4494.jpg",
@@ -335,7 +335,7 @@
     "aperture": "f/4",
     "shutterSpeed": "1/8",
     "iso": 100,
-    "Keywords": "London;UK;cityscape;explore"
+    "keywords": "London;UK;cityscape;explore"
   },
   {
     "filename": "DSC_4501-Pano.jpg",
@@ -348,7 +348,7 @@
     "aperture": "f/4",
     "shutterSpeed": "1/25",
     "iso": 800,
-    "Keywords": "London;UK;cityscape;explore"
+    "keywords": "London;UK;cityscape;explore"
   },
   {
     "filename": "DSC_4524.jpg",
@@ -361,7 +361,7 @@
     "aperture": "f/4",
     "shutterSpeed": "1/125",
     "iso": 100,
-    "Keywords": "London;UK;cityscape;explore"
+    "keywords": "London;UK;cityscape;explore"
   },
   {
     "filename": "DSC_4534.jpg",
@@ -374,7 +374,7 @@
     "aperture": "f/4",
     "shutterSpeed": "1/40",
     "iso": 100,
-    "Keywords": "London;UK;cityscape;explore"
+    "keywords": "London;UK;cityscape;explore"
   },
   {
     "filename": "DSC_4633.jpg",
@@ -387,7 +387,7 @@
     "aperture": "f/4",
     "shutterSpeed": "1/640",
     "iso": 140,
-    "Keywords": "animal;explore;nature"
+    "keywords": "animal;explore;nature"
   },
   {
     "filename": "DSC_4638.jpg",
@@ -400,7 +400,7 @@
     "aperture": "f/4",
     "shutterSpeed": "1/640",
     "iso": 110,
-    "Keywords": "animal;explore;nature"
+    "keywords": "animal;explore;nature"
   },
   {
     "filename": "DSC_4657.jpg",
@@ -413,6 +413,6 @@
     "aperture": "f/4",
     "shutterSpeed": "1/640",
     "iso": 100,
-    "Keywords": "animal;explore;nature"
+    "keywords": "animal;explore;nature"
   }
 ]
