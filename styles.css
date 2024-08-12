@@ -8,6 +8,7 @@ body, html {
 
 .site-header {
     display: flex;
+    height: 9vh;
     justify-content: space-between;
     padding: 20px 20px;
     background-color: #333;
