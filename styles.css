@@ -17,7 +17,7 @@ body, html {
     color: #fff;
     text-decoration: none;
     padding: 0 10px;
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 .main-navigation {
@@ -36,11 +36,14 @@ body, html {
     cursor: pointer;
 }
 
+.content {
+    width: 80%;
+    margin: 20px auto; /* 让.content在页面中心 */
+}
+
 .gallery {
     width: 100%;
     margin: auto;
-    padding: 20px 30px; 
-    box-sizing: border-box;
 }
 
 .photo-wrapper {
