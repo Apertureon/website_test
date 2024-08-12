@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const containers = data.map(photo => {
                 const imgDiv = document.createElement('div');
                 imgDiv.className = 'photo-wrapper';
-                imgDiv.style.width = '100%'; // 宽度由 Masonry 控制，通常为列宽的一部分
+                // imgDiv.style.width = '100%'; // 宽度由 Masonry 控制，通常为列宽的一部分
 
                 // 创建一个透明的占位元素以保持宽高比
                 const spacer = document.createElement('div');
