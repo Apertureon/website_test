@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const gallery = document.querySelector('.gallery');
+    const modal = document.getElementById('Modal');
+    const modalImg = document.getElementById("ModalImg");
+    const captionText = document.getElementById("caption");
+    const close = document.getElementsByClassName("close")[0];
+
     fetch('imagesInfo.json')
         .then(response => response.json())
         .then(data => {
@@ -25,6 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 img.style.transition = 'opacity 1s ease-in'; // 添加渐显效果
                 imgDiv.appendChild(img);
 
+                // 添加点击事件
+                img.addEventListener('click', () => {
+                    modal.style.display = "block";
+                    modalImg.src = photo.filePath; // 使用原图路径
+                    captionText.innerHTML = photo.cameraModel; // 或其他适当的图片信息
+                });
                 return imgDiv;
             });
 
@@ -53,5 +64,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 img.src = photo.thumbnailPath; 
                 img.onload = () => img.style.opacity = 1; // 图片加载完成后逐渐显示
             });
+
+            close.onclick = function() {
+                modal.style.display = "none";
+            };
         });
 });
