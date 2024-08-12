@@ -21,11 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // 准备图片元素，但不设置源
                 const img = document.createElement('img');
                 img.alt = "Photo";
-                img.style.position = 'absolute';
-                img.style.top = 0;
-                img.style.left = 0;
-                img.style.width = '100%';
-                img.style.height = '100%';
                 img.style.opacity = 0; // 初始透明度设为0
                 img.style.transition = 'opacity 1s ease-in'; // 添加渐显效果
                 imgDiv.appendChild(img);
@@ -38,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const iso = new Isotope(gallery, {
                 itemSelector: '.photo-wrapper',
                 percentPosition: true,
+                filter: '.featured',
                 masonry: {
                     columnWidth: '.grid-sizer',
                     gutter: '.gutter-sizer'
@@ -54,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // 布局初始化完成后设置图片并开始加载
             data.forEach((photo, index) => {
                 const img = containers[index].querySelector('img');
-                img.src = photo.thumbnailPath; // 设置thumbnail图片路径
+                img.src = photo.thumbnailPath; 
                 img.onload = () => img.style.opacity = 1; // 图片加载完成后逐渐显示
             });
         });
