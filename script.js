@@ -8,10 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const imgDiv = document.createElement('div');
                 imgDiv.className = 'photo-wrapper';
                 imgDiv.style.paddingTop = `${(photo.height / photo.width) * 100}%`; // 创建比例盒子以保持图像的宽高比
-
-                // 初始化容器的背景样式，但不立即设置图片
-                imgDiv.style.backgroundSize = 'cover';
-                imgDiv.style.backgroundPosition = 'center center';
+                
                 gallery.appendChild(imgDiv);
             });
 
@@ -26,6 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
             data.forEach((photo, index) => {
                 const imgDiv = gallery.children[index];
                 imgDiv.style.backgroundImage = `url('${photo.thumbnailPath}')`; // 设置thumbnail图片为背景
+                imgDiv.style.backgroundSize = 'cover';
+                imgDiv.style.backgroundPosition = 'center center';
             });
         });
 });

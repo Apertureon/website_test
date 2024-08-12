@@ -42,8 +42,8 @@ body, html {
 
 .photo-wrapper {
     position: relative;
-    width: 100%; /* or another width if you are controlling it differently */
     overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .grid-sizer, .photo-wrapper {
