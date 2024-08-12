@@ -7,7 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const containers = data.map(photo => {
                 const imgDiv = document.createElement('div');
                 imgDiv.className = 'photo-wrapper';
-                // imgDiv.style.width = '100%'; // 宽度由 Masonry 控制，通常为列宽的一部分
+
+                // 根据关键词添加类
+                photo.keywords.split(';').forEach(keyword => {
+                    imgDiv.classList.add(keyword.trim().toLowerCase().replace(/\s+/g, '-'));
+                });
 
                 // 创建一个透明的占位元素以保持宽高比
                 const spacer = document.createElement('div');
@@ -31,11 +35,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // 将容器添加到画廊并初始化 Masonry 布局
             containers.forEach(container => gallery.appendChild(container));
-            new Masonry(gallery, {
+            const iso = new Isotope(gallery, {
                 itemSelector: '.photo-wrapper',
-                columnWidth: '.grid-sizer',
-                gutter: '.gutter-sizer',
-                percentPosition: true
+                percentPosition: true,
+                masonry: {
+                    columnWidth: '.grid-sizer',
+                    gutter: '.gutter-sizer'
+                }    
+            });
+
+            // 绑定筛选按钮事件
+            document.querySelectorAll('.nav-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    iso.arrange({ filter: this.getAttribute('data-filter') });
+                });
             });
 
             // 布局初始化完成后设置图片并开始加载
