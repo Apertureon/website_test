@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     modal.style.display = "block";
                     modalImg.src = photo.filePath;
                     //captionText.innerHTML = photo.description; // 假设description是描述信息
-                    imgParameter.textContent = `Parameter: f/${photoData.aperture || 'unknown'}, 1/${photoData.shutterSpeed || 'unknown'}s, ISO ${photoData.iso || 'unknown'}`;
+                    imgParameter.textContent = `Parameter: f/${photo.aperture || 'unknown'}, 1/${photo.shutterSpeed || 'unknown'}s, ISO ${photo.iso || 'unknown'}`;
                     imgLocation.textContent = `Location: ${photo.location || 'unknown'}`;
                     imgCamera.textContent = `Camera: ${photo.cameraModel || 'unknown'}`;
                     imgLens.textContent = `Lens: ${photo.lensModel || 'unknown'}`;
