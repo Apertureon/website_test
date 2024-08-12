@@ -36,7 +36,7 @@ body, html {
 
 .gallery {
     width: 100%; 
-    margin: 20px auto;
+    margin: 20px 20px;
     box-sizing: border-box;
 }
 
@@ -44,11 +44,16 @@ body, html {
     position: relative;
     overflow: hidden;
     background-color: #eee; /* 灰色背景，占位用 */
+    margin-bottom: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .grid-sizer, .photo-wrapper {
-    width: 33.333%; /* 每列占总宽度的三分之一 */
+    width: 32%; /* 每列占总宽度的三分之一 */
+}
+
+.gutter-sizer {
+    width: 2%;
 }
 
 .photo-wrapper img {

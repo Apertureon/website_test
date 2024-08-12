@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             new Masonry(gallery, {
                 itemSelector: '.photo-wrapper',
                 columnWidth: '.grid-sizer',
+                gutter: '.gutter-sizer',
                 percentPosition: true
             });
 
