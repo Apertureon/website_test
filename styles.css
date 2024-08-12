@@ -89,16 +89,19 @@ body, html {
     background-color: rgba(0, 0, 0, 0.9); 
   }
 
-  .modal-content {
-    margin: auto;
+.modal-content {
     display: block;
-    width: 80%; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     max-width: 95%; 
     max-height: 90%; 
-  }
+    width: auto; 
+    height: auto;
+}
   
-  /* 关闭按钮的样式 */
-  .close {
+/* 关闭按钮的样式 */
+.close {
     position: absolute;
     top: 15px;
     right: 30px;
@@ -106,7 +109,7 @@ body, html {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
-  }
+}
 
 @media (max-width: 600px) {
     .content {
