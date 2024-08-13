@@ -134,17 +134,17 @@ body, html {
     font-weight: bold; /* label加粗 */
     color: #9d9d9d; /* label的颜色 */
     margin-bottom: 5px; /* label与value之间的间距 */
-    font-size: 0.9em;
+    font-size: 15px;
 }
 
 .photo-info .value {
     color: #ccc;
-    font-size: 0.85em;
+    font-size: 14px;
 }
 
 .icon {
-    width: 1em; 
-    height: 1em;
+    width: 14px; 
+    height: 14px;
     stroke: #ccc; 
     fill: none; 
 }
