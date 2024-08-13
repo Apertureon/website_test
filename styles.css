@@ -143,8 +143,8 @@ body, html {
 }
 
 .icon {
-    width: 0.85em; 
-    height: 0.85em;
+    width: 1em; 
+    height: 1em;
     stroke: #ccc; 
     fill: none; 
 }
