@@ -59,19 +59,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 // 添加点击事件
                 img.onclick = () => {
                     const modalImg = document.getElementById("ModalImg");
-                    //const captionText = document.getElementById("caption");
-                    const imgParameter = document.getElementById('parameter');
-                    const imgLocation = document.getElementById('location');
-                    const imgCamera = document.getElementById('camera');
-                    const imgLens = document.getElementById('lens');
+                    const imgParameter = document.getElementById('parameter').querySelector('.value');
+                    const imgLocation = document.getElementById('location').querySelector('.value');
+                    const imgCamera = document.getElementById('camera').querySelector('.value');
+                    const imgLens = document.getElementById('lens').querySelector('.value');
 
+                    // 显示图片和参数
                     modal.style.display = "block";
                     modalImg.src = photo.filePath;
-                    //captionText.innerHTML = photo.description; // 假设description是描述信息
-                    imgParameter.textContent = `Parameter: ${photo.aperture || 'unknown'}, ${photo.shutterSpeed || 'unknown'}, ISO ${photo.iso || 'unknown'}`;
-                    imgLocation.textContent = `Location: ${photo.location || 'unknown'}`;
-                    imgCamera.textContent = `Camera: ${photo.cameraModel || 'unknown'}`;
-                    imgLens.textContent = `Lens: ${photo.lensModel || 'unknown'}`;
+                    
+                    imgParameter.textContent = `${photo.aperture || 'unknown'}, ${photo.shutterSpeed || 'unknown'}, ISO ${photo.iso || 'unknown'}`;
+                    imgLocation.textContent = `${photo.location || 'unknown'}`;
+                    imgCamera.textContent = `${photo.cameraModel || 'unknown'}`;
+                    imgLens.textContent = `${photo.lensModel || 'unknown'}`;
                 };
             });
 

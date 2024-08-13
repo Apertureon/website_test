@@ -102,23 +102,44 @@ body, html {
     height: auto;
 }
 
-.modal .photo-info {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 85%;
-    display: flex; 
-    justify-content: space-between; 
-    color: #ccc; 
-    padding: 0 20px; 
-    font-size: 16px;
+.photo-info {
+    position: fixed; /* 固定位置，相对于视窗 */
+    bottom: 0; /* 定位到底部 */
+    left: 0; /* 从左侧开始 */
+    width: 100%; /* 宽度占满整个视窗宽度 */
+    height: 10%; /* 高度为视窗高度的 10% */
+    background-color: rgba(3, 3, 3, 0.8); /* 背景颜色，含透明度 */
+    color: #fff; /* 字体颜色 */
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* 垂直居中对齐子元素 */
+    justify-content: center; /* 水平居中对齐子元素 */
+    text-align: center; /* 文本居中 */
+    padding: 0 20px; /* 添加一些内边距 */
 }
 
-.modal .photo-info > div {
+.photo-info > div {
     display: flex;
     justify-content: center;
     padding: 5px 10px; 
+}
+
+.photo-info .label, .photo-info .value {
+    display: block; /* 使label和value在不同行显示 */
+    white-space: nowrap; /* 防止内容换行 */
+    overflow: hidden; /* 超出部分隐藏 */
+    text-overflow: ellipsis; /* 超出部分显示省略号 */
+}
+
+.photo-info .label {
+    font-weight: bold; /* label加粗 */
+    color: #ccc; /* label的颜色 */
+    margin-bottom: 5px; /* label与value之间的间距 */
+}
+
+.photo-info .value {
+    font-size: larger; /* 增大value的字体大小 */
+    color: #fff; /* value的颜色 */
 }
 
 /* 关闭按钮的样式 */
