@@ -41,6 +41,7 @@ body, html {
     border: none;
     cursor: pointer;
     background: transparent;
+    font-weight: bold;
 }
 
 .content {
@@ -108,8 +109,7 @@ body, html {
     left: 0; /* 从左侧开始 */
     width: 100%; /* 宽度占满整个视窗宽度 */
     height: 10%; /* 高度为视窗高度的 10% */
-    background-color: rgba(3, 3, 3, 0.8); /* 背景颜色，含透明度 */
-    color: #fff; /* 字体颜色 */
+    /* background-color: rgba(3, 3, 3, 0.8); /* 背景颜色，含透明度 */
     display: flex;
     flex-direction: row;
     align-items: center; /* 垂直居中对齐子元素 */
@@ -119,7 +119,7 @@ body, html {
 }
 
 .photo-info > div {
-    padding: 5px 10px; 
+    padding: 0 10px; 
 }
 
 .photo-info .label, .photo-info .value {
@@ -127,6 +127,7 @@ body, html {
     white-space: nowrap; /* 防止内容换行 */
     overflow: hidden; /* 超出部分隐藏 */
     text-overflow: ellipsis; /* 超出部分显示省略号 */
+    color: #ccc;
 }
 
 .photo-info .label {
@@ -136,7 +137,7 @@ body, html {
 }
 
 .photo-info .value {
-    color: #fff; /* value的颜色 */
+    font-size: smaller;
 }
 
 /* 关闭按钮的样式 */
