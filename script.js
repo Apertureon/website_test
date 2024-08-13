@@ -82,9 +82,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     modalImg.src = photo.filePath;
                     
                     imgParameter.innerHTML =
-                        '<img src="icons/iso-filled.svg" alt="Camera" class="icon">' + (photo.aperture || 'unknown') +
-                        '<img src="icons/aperture-outline.svg" alt="Shutter Speed" class="icon">' + (photo.shutterSpeed || 'unknown') +
-                        '<img src="icons/timer-outline.svg" alt="ISO" class="icon">' + (photo.iso || 'unknown');
+                        '<img src="icons/aperture-outline.svg" alt="Camera" class="icon">' + (photo.aperture || 'unknown') +
+                        '<img src="icons/timer-outline.svg" alt="Shutter Speed" class="icon">' + (photo.shutterSpeed || 'unknown') +
+                        '<img src="icons/iso-outline.svg" alt="ISO" class="icon">' + (photo.iso || 'unknown');
                     imgLocation.textContent = `${photo.location || 'unknown'}`;
                     imgCamera.innerHTML = `${toTitleCase(photo.cameraModel || 'unknown')}`;
                     imgLens.innerHTML = `${toTitleCase(photo.lensModel || 'unknown')}`;

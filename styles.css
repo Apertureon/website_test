@@ -134,17 +134,19 @@ body, html {
     font-weight: bold; /* label加粗 */
     color: #9d9d9d; /* label的颜色 */
     margin-bottom: 5px; /* label与value之间的间距 */
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .photo-info .value {
     color: #ccc;
-    font-size: 0.75em;
+    font-size: 0.85em;
 }
 
 .icon {
-    width: 24px; 
-    height: 24px;
+    width: 0.85em; 
+    height: 0.85em;
+    stroke: #ccc; 
+    fill: none; 
 }
 
 /* 关闭按钮的样式 */
