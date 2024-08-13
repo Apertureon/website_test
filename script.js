@@ -81,15 +81,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     modal.style.display = "block";
                     modalImg.src = photo.filePath;
                     
-                    imgParameter.innerHTML = `
-                    <i class="fas fa-camera"></i> ${photo.aperture || 'unknown'},
-                    <i class="fas fa-stopwatch"></i> ${photo.shutterSpeed || 'unknown'},
-                    <i class="fas fa-burn"></i> ${photo.iso || 'unknown'}`;
-                    //imgParameter.textContent = `${photo.aperture || 'unknown'}, ${photo.shutterSpeed || 'unknown'}, ISO ${photo.iso || 'unknown'}`;
+                    imgParameter.innerHTML =
+                        '<img src="icons/iso-outline.svg" alt="Camera" class="icon">' + (photo.aperture || 'unknown') +
+                        '<img src="icons/aperture-outline.svg" alt="Shutter Speed" class="icon">' + (photo.shutterSpeed || 'unknown') +
+                        '<img src="icons/timer-outline.svg" alt="ISO" class="icon">' + (photo.iso || 'unknown');
                     imgLocation.textContent = `${photo.location || 'unknown'}`;
                     imgCamera.innerHTML = `${toTitleCase(photo.cameraModel || 'unknown')}`;
                     imgLens.innerHTML = `${toTitleCase(photo.lensModel || 'unknown')}`;
-
                 };
             });
 

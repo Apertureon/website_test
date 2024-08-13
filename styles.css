@@ -8,7 +8,7 @@ body, html {
 
 .site-header {
     display: flex;
-    height: 9vh;
+    height: 10vh;
     align-items: center; 
     justify-content: space-between;
     padding: 0 50px;
