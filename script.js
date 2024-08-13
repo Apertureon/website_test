@@ -3,6 +3,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('Modal');
     const close = document.getElementsByClassName("close")[0];
 
+    function toTitleCase(str) {
+        // 先处理 'Z' 后跟数字的情况，将它们合并
+        str = str.replace(/Z (\d+)/g, 'Z$1');
+    
+        return str.split(' ').map(function(word) {
+            // 特殊处理 NIKON 和 NIKKOR
+            if (word.toUpperCase() === "NIKON" || word.toUpperCase() === "NIKKOR") {
+                return word[0].toUpperCase() + word.substr(1).toLowerCase();
+            }
+            return word;
+        }).join(' ');
+    }    
+
     fetch('imagesInfo.json')
         .then(response => response.json())
         .then(data => {
@@ -74,8 +87,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     <i class="fas fa-burn"></i> ${photo.iso || 'unknown'}`;
                     //imgParameter.textContent = `${photo.aperture || 'unknown'}, ${photo.shutterSpeed || 'unknown'}, ISO ${photo.iso || 'unknown'}`;
                     imgLocation.textContent = `${photo.location || 'unknown'}`;
-                    imgCamera.textContent = `${photo.cameraModel || 'unknown'}`;
-                    imgLens.textContent = `${photo.lensModel || 'unknown'}`;
+                    imgCamera.innerHTML = `${toTitleCase(photo.cameraModel || 'unknown')}`;
+                    imgLens.innerHTML = `${toTitleCase(photo.lensModel || 'unknown')}`;
+
                 };
             });
 

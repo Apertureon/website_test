@@ -127,18 +127,19 @@ body, html {
     white-space: nowrap; /* 防止内容换行 */
     overflow: hidden; /* 超出部分隐藏 */
     text-overflow: ellipsis; /* 超出部分显示省略号 */
-    color: #ccc;
-    font-size: 0.75em;
+    
 }
 
 .photo-info .label {
     font-weight: bold; /* label加粗 */
-    color: #ccc; /* label的颜色 */
+    color: #9d9d9d; /* label的颜色 */
     margin-bottom: 5px; /* label与value之间的间距 */
+    font-size: 0.8em;
 }
 
 .photo-info .value {
-    font-size: smaller;
+    color: #ccc;
+    font-size: 0.75em;
 }
 
 /* 关闭按钮的样式 */
