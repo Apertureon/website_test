@@ -107,6 +107,7 @@ body, html {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
+    width: 85%;
     display: flex; 
     justify-content: space-between; 
     color: #ccc; 
@@ -115,6 +116,8 @@ body, html {
 }
 
 .modal .photo-info > div {
+    display: flex;
+    justify-content: center;
     padding: 5px 10px; 
 }
 

@@ -68,10 +68,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     modal.style.display = "block";
                     modalImg.src = photo.filePath;
                     //captionText.innerHTML = photo.description; // 假设description是描述信息
-                    imgParameter.textContent = `Parameter: ${photo.aperture || 'unknown'}, ${photo.shutterSpeed || 'unknown'}, ISO ${photo.iso || 'unknown'}`;
-                    imgLocation.textContent = `Location: ${photo.location || 'unknown'}`;
-                    imgCamera.textContent = `Camera: ${photo.cameraModel || 'unknown'}`;
-                    imgLens.textContent = `Lens: ${photo.lensModel || 'unknown'}`;
+                    imgParameter.textContent = `Parameter: <br>${photo.aperture || 'unknown'}, ${photo.shutterSpeed || 'unknown'}, ISO ${photo.iso || 'unknown'}`;
+                    imgLocation.textContent = `Location: <br>${photo.location || 'unknown'}`;
+                    imgCamera.textContent = `Camera: <br>${photo.cameraModel || 'unknown'}`;
+                    imgLens.textContent = `Lens: <br>${photo.lensModel || 'unknown'}`;
                 };
             });
 
