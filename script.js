@@ -68,7 +68,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     modal.style.display = "block";
                     modalImg.src = photo.filePath;
                     
-                    imgParameter.textContent = `${photo.aperture || 'unknown'}, ${photo.shutterSpeed || 'unknown'}, ISO ${photo.iso || 'unknown'}`;
+                    imgParameter.innerHTML = `
+                    <i class="fas fa-camera"></i> ${photo.aperture || 'unknown'},
+                    <i class="fas fa-stopwatch"></i> ${photo.shutterSpeed || 'unknown'},
+                    <i class="fas fa-burn"></i> ${photo.iso || 'unknown'}`;
+                    //imgParameter.textContent = `${photo.aperture || 'unknown'}, ${photo.shutterSpeed || 'unknown'}, ISO ${photo.iso || 'unknown'}`;
                     imgLocation.textContent = `${photo.location || 'unknown'}`;
                     imgCamera.textContent = `${photo.cameraModel || 'unknown'}`;
                     imgLens.textContent = `${photo.lensModel || 'unknown'}`;

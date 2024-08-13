@@ -104,11 +104,11 @@ body, html {
 }
 
 .photo-info {
-    position: fixed; /* 固定位置，相对于视窗 */
-    bottom: 0; /* 定位到底部 */
-    left: 0; /* 从左侧开始 */
-    width: 100%; /* 宽度占满整个视窗宽度 */
-    height: 10%; /* 高度为视窗高度的 10% */
+    position: fixed; 
+    bottom: 1%; 
+    left: 0; 
+    width: 100%; 
+    height: 9%; 
     /* background-color: rgba(3, 3, 3, 0.8); /* 背景颜色，含透明度 */
     display: flex;
     flex-direction: row;
@@ -128,6 +128,7 @@ body, html {
     overflow: hidden; /* 超出部分隐藏 */
     text-overflow: ellipsis; /* 超出部分显示省略号 */
     color: #ccc;
+    font-size: 0.75em;
 }
 
 .photo-info .label {
