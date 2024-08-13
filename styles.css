@@ -119,8 +119,6 @@ body, html {
 }
 
 .photo-info > div {
-    display: flex;
-    justify-content: center;
     padding: 5px 10px; 
 }
 
@@ -138,7 +136,6 @@ body, html {
 }
 
 .photo-info .value {
-    font-size: larger; /* 增大value的字体大小 */
     color: #fff; /* value的颜色 */
 }
 
