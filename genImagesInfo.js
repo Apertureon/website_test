@@ -36,7 +36,10 @@ async function processImages(directory, thumbnailDirectory) {
             aperture: tags['FNumber'] ? tags['FNumber'].description : 'Unknown',
             shutterSpeed: tags['ExposureTime'] ? tags['ExposureTime'].description : 'Unknown',
             iso: tags['ISOSpeedRatings'] ? tags['ISOSpeedRatings'].value : 'Unknown',
-            keywords: tags['Keywords'] ? tags['Keywords'].map(kw => kw.description).join(';') : 'Unknown'
+            keywords: tags['Keywords'] ? tags['Keywords'].map(kw => kw.description).join(';') : 'Unknown',
+            country: tags['Country'] ? tags['Country'].description : 'Unknown',
+            city: tags['City'] ? tags['City'].description : 'Unknown'
+            
         };
 
         imagesInfo.push(imageInfo);
