@@ -15,8 +15,9 @@
     <header class="site-header">
         <img src="logo.png" alt="Website Logo">
         <div class="header-links">
-            <a href="#">Follow</a>
-            <a href="#">About</a>
+            <img src="icons/language.svg" id="language-icon" alt="Switch Language">
+            <a href="#" id="follow-link">Follow</a>
+            <a href="#" id="about-link">About</a>
         </div>
     </header>
     <nav class="main-navigation">
@@ -37,23 +38,24 @@
         <img class="modal-content" id="ModalImg">
         <span class="close">&times;</span>
         <div class="photo-info">
-            <div id="parameter">
+            <div id="parameter" class="info-block">
                 <span class="label">Parameter</span>
                 <span class="value"></span>
             </div>
-            <div id="location">
+            <div id="location" class="info-block">
                 <span class="label">Location</span>
                 <span class="value"></span>
             </div>
-            <div id="camera">
+            <div id="camera" class="info-block">
                 <span class="label">Camera</span>
                 <span class="value"></span>
             </div>
-            <div id="lens">
+            <div id="lens" class="info-block">
                 <span class="label">Lens</span>
                 <span class="value"></span>
             </div>
         </div>
+        <button class="info-toggle" id="show-info-button">Show Info</button>
     </div>
 </body>
 </html>

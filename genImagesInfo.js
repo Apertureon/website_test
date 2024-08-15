@@ -6,6 +6,18 @@ const exifReader = require('exifreader');
 const imagesDirectory = './images';
 const thumbnailsDirectory = './thumbnails';
 
+// 定义一个函数来处理关键词的格式化
+function formatKeywords(keywords) {
+    if (Array.isArray(keywords)) {
+        // 如果是数组，提取所有描述并用分号分隔
+        return keywords.map(kw => kw.description).join(';');
+    } else if (typeof keywords === 'object' && keywords.description) {
+        // 如果是单个对象并且有描述属性，直接返回描述
+        return keywords.description;
+    }
+    return 'Unknown';
+}
+
 // 将路径中的反斜杠替换为正斜杠的函数
 function normalizePath(path) {
     return path.replace(/\\/g, '/');
@@ -23,7 +35,7 @@ async function processImages(directory, thumbnailDirectory) {
         const data = fs.readFileSync(filePath);
         const tags = exifReader.load(data);
         
-        // console.log(`FNumber for ${file}:`, tags['FNumber']);
+        // console.log(`Keywords for ${file}:`, tags['Keywords'].description);
         // 创建图像信息对象
         const imageInfo = {
             filename: file,
@@ -36,7 +48,7 @@ async function processImages(directory, thumbnailDirectory) {
             aperture: tags['FNumber'] ? tags['FNumber'].description : 'Unknown',
             shutterSpeed: tags['ExposureTime'] ? tags['ExposureTime'].description : 'Unknown',
             iso: tags['ISOSpeedRatings'] ? tags['ISOSpeedRatings'].value : 'Unknown',
-            keywords: tags['Keywords'] ? tags['Keywords'].map(kw => kw.description).join(';') : 'Unknown',
+            keywords: formatKeywords(tags['Keywords']),
             country: tags['Country'] ? tags['Country'].description : 'Unknown',
             city: tags['City'] ? tags['City'].description : 'Unknown'
             
